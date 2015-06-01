@@ -9,7 +9,7 @@ redis:
 influxdb:
   build: ./Influxdb
   env_file:
-    - ./support/sensu.env
+    - /usr/local/etc/sensu-docker/sensu.env
   volumes:
     - /usr/local/etc/sensu-docker:/usr/local/etc/sensu-docker
   links:
@@ -25,7 +25,7 @@ influxdb:
 grafana:
   build: ./Grafana
   env_file:
-    - ./support/sensu.env
+    - /usr/local/etc/sensu-docker/sensu.env
   volumes:
     - /usr/local/etc/sensu-docker:/usr/local/etc/sensu-docker
   links:
