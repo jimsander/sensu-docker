@@ -1,12 +1,12 @@
 FROM ubuntu:trusty
-MAINTAINER John Dilts <john.dilts@enstratius.com>
+MAINTAINER Jim Sander <jim.sander@enstratius.com>
 
 RUN apt-get update && apt-get install -y curl wget openssl supervisor
 
 RUN useradd -d /home/sensu -m -s /bin/bash sensu
 RUN echo sensu:sensu | chpasswd
 
-ADD https://raw.githubusercontent.com/jbrien/sensu-docker/compose/support/install-sensu.sh /tmp/
+ADD https://raw.githubusercontent.com/jimsander/sensu-docker/compose/support/install-sensu.sh /tmp/
 RUN chmod +x /tmp/install-sensu.sh
 RUN /tmp/install-sensu.sh
 

@@ -1,5 +1,5 @@
 FROM ubuntu:trusty
-MAINTAINER John Dilts <john.dilts@enstratius.com>
+MAINTAINER Jim Sander <jim.sander@enstratius.com>
 
 RUN apt-get update && apt-get install -y wget curl git-core supervisor
 
